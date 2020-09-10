@@ -64,6 +64,8 @@ window.addEventListener("load", function() {
 
          fuelStatus.innerHTML = `Not enough fuel for journey!`;
 
+         fuelReady = false;
+
          event.preventDefault();
       } else {
          fuelReady = true;
@@ -77,6 +79,8 @@ window.addEventListener("load", function() {
          elementVis.style.visibility = "visible";
 
          cargoStatus.innerHTML = `Cargo too heavy for launch!`;
+
+         cargoReady = false;
 
          event.preventDefault();
       } else {
