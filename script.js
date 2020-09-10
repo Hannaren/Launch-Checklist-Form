@@ -38,18 +38,23 @@ window.addEventListener("load", function() {
 
       if (pilotInput.value.trim() === "" || copilotInput.value.trim() === "" || fuelLevelInput.value.trim() === "" || cargoMassInput.value.trim() === "") {
          alert("All fields are required!");
+         formCheck = false;
          event.preventDefault();
       } else if (typeof String(pilotInput.value) !== "string" || !letters.test(pilotInput.value)) {
          alert("Pilot name may only include letters!");
+         formCheck = false;
          event.preventDefault();
       } else if (typeof String(copilotInput.value) !== "string" || !letters.test(copilotInput.value)) {
          alert("Co-pilot name may only include letters!");
+         formCheck = false;
          event.preventDefault();
       } else if (isNaN(Number(fuelLevelInput.value))) {
          alert("Invalid input: Only numbers can be used as input for fuel level!");
+         formCheck = false;
          event.preventDefault();
       } else if (isNaN(Number(cargoMassInput.value))) {
          alert("Invalid input: Only numbers can be used as input for cargo mass!");
+         formCheck = false;
          event.preventDefault();
       } else {
          formCheck = true;
